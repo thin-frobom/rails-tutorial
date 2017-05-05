@@ -7,6 +7,9 @@ end
 
 gem 'rails-controller-testing'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bcrypt', '~> 3.1.11'
+#gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
+# gem 'bcrypt', platforms: :ruby
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # Use sqlite3 as the database for Active Record

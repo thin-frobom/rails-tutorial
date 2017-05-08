@@ -7,9 +7,12 @@ end
 
 gem 'rails-controller-testing'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bcrypt', '~> 3.1.11'
- gem 'jquery-rails'
-  gem 'jquery-turbolinks' 
+gem 'jquery-rails'
+gem 'jquery-turbolinks' 
+gem 'faker',          '1.6.6'
   # gem 'bcrypt', platforms: :ruby
 #gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
 

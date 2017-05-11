@@ -4,8 +4,13 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
+  # def setup
+  #   @user = users(:michael)
+  # end
+
   def setup
-    @user = users(:michael)
+    @admin = users(:michael)
+    @non_admin = users(:archer)
   end
 
   test "login with valid information" do

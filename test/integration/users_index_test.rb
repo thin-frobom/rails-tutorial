@@ -4,8 +4,11 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
-   def setup
+  
+  def setup
     @user = users(:michael)
+    @admin     = users(:michael)
+    @non_admin = users(:archer)
   end
 
   test "index including pagination" do

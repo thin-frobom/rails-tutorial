@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class User < ActiveRecord::Base
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest
@@ -54,14 +54,14 @@ class User < ApplicationRecord
 
   # Activates an account.
   def activate
-    #update_columns(activated: true, activated_at: Time.zone.now)
-    update_attribute(:activated,    true)
-    update_attribute(:activated_at, Time.zone.now)  
+    update_columns(activated: true, activated_at: Time.zone.now)
+    #update_attribute(:activated,    true)
+    #update_attribute(:activated_at, Time.zone.now)  
   end
 
   # Sends activation email.
   def send_activation_email
-    UserMailer.account_activation(@user).deliver_now
+     UserMailer.account_activation(self).deliver_now
   end
 
   # Sets the password reset attributes.

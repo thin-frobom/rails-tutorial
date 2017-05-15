@@ -9,10 +9,11 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   # end
 
   def setup
-    @admin = users(:michael)
+    @user = users(:michael)
+    @admin     = users(:michael)
     @non_admin = users(:archer)
   end
-
+  
   test "login with valid information" do
     get login_path
     post login_path, params: { session: { email:    @user.email,
